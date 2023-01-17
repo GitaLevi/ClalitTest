@@ -20,7 +20,7 @@ namespace ClalitTest.Services
 
         public async Task<string> GetAllCurrencies()
         {
-            try
+            try 
             {
                 string jsonText = string.Empty;
                 string url = _configuration["dataUrl"];
