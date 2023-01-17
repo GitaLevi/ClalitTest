@@ -1,0 +1,21 @@
+<div *ngIf="currenciesList.length > 0">
+    <table class="main-table">
+        <thead class="th-position">
+            <th>Key</th>
+            <th>CurrentChange</th>
+            <th>CurrentExchangeRate</th>
+            <th>LastUpdate</th>
+            <th>Unit</th>
+        </thead>
+        <tbody *ngFor="let currency of currenciesList">
+            <tr>
+                <td>{{currency.Key}}</td>
+                <td>{{currency.CurrentChange}}</td>
+                <td>{{currency.CurrentExchangeRate}}</td>
+                <td>{{currency.LastUpdate | date}}</td>
+                <td>{{currency.Unit}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="currenciesList.length == 0">לא נמצאו פריטים מתאימים</div>
